@@ -1,0 +1,36 @@
+width = 1200px
+
+.theme-default-content:not(.custom){
+    max-width: width;
+}
+
+.page-nav:not(.custom) {
+    max-width: width;
+}
+
+.page-edit:not(.custom) {
+    max-width: width;
+}
+.sidebar-links > li{
+    font-size: 14.5px;    
+}
+// 添加编号
+h1 {
+    counter-reset: h2Counter ;
+}
+/* insert number before h2 element */
+h2:before {
+    content: counter(h2Counter)'. '
+}
+/* increase h2 counter and reset h3 counter when meet a h2 element */
+h2 {
+    counter-increment: h2Counter;
+    counter-reset: h3Counter;
+}
+h3:before {
+    content: counter(h2Counter) '.' counter(h3Counter) ' '
+}
+h3 {
+    counter-increment: h3Counter;
+}
+// 添加编号结束
